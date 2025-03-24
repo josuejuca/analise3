@@ -7,7 +7,9 @@ from pydantic import BaseModel
 from datetime import datetime, date
 import enum
 from fastapi.middleware.cors import CORSMiddleware
-
+from pathlib import Path
+import re
+from fastapi.responses import FileResponse
 # teste 
 from gateway_certidoes import router as gateway_certidoes_router
 from db import get_db
@@ -33,6 +35,15 @@ app.add_middleware(
 # =======================
 # ENDPOINTS
 # =======================
+# Acessar docs 
+docs_path = Path("files")
+
+@app.get("/files/{filename}", tags=["Arquivos"])
+async def get_file(filename: str):
+    file_path = docs_path / filename
+    if file_path.exists() and file_path.is_file():
+        return FileResponse(file_path, filename=filename, media_type="application/octet-stream")
+    raise HTTPException(status_code=404, detail="Arquivo não encontrado")
 
 # Rota para etapa 1 via CPF
 @app.post("/analises/etapa1/cpf/")

@@ -54,7 +54,7 @@ def process_cnpj_criminal(cnpj: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "CRIMINAL",
         "texto_doc": texto,
         "pendencia": pendencia,
@@ -110,7 +110,7 @@ def process_cnpj_civel(cnpj: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "CIVEL",
         "texto_doc": texto,
         "pendencia": pendencia,
@@ -166,7 +166,7 @@ def process_cnpj_eleitoral(cnpj: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "ELEITORAL",
         "texto_doc": texto,
         "pendencia": pendencia,
@@ -224,7 +224,7 @@ def process_cpf_criminal(cpf: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "CRIMINAL",
         "texto_doc": texto,
         "pendencia": pendencia,
@@ -280,7 +280,7 @@ def process_cpf_civel(cpf: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "CIVEL",
         "texto_doc": texto,
         "pendencia": pendencia,
@@ -336,7 +336,7 @@ def process_cpf_eleitoral(cpf: str) -> dict:
     resultado = {
         "status": "finalizado",
         "arquivo": novo_nome_arquivo,
-        "arquivo_url": f"https://docx.juk.re/files/{novo_nome_arquivo}",
+        "arquivo_url": f"http://local.juk.re:8000/files/{novo_nome_arquivo}",
         "tipo_doc": "ELEITORAL",
         "texto_doc": texto,
         "pendencia": pendencia,
